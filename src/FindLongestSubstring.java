@@ -2,28 +2,6 @@ import java.util.*;
 
 public class FindLongestSubstring {
     private int spyStart = 0;
-//    public void lengthOfLongestSubString(String str) {
-//        Map<Integer, String> strPairs = new HashMap<>();
-//        String[] splitStr = str.split("");
-//
-//        // store key value pair of each str
-//        for (int i = 0; i < splitStr.length; i++) {
-//            strPairs.put(i, splitStr[i]);
-//        }
-//
-//        for (int i = 0; i < strPairs.size(); i++) {
-////            if (Objects.equals(strPairs.ge, splitStr[i]))
-//        }
-//
-//
-//
-//        // count the number of occurrence
-//
-//
-//        System.out.println(strPairs);
-//
-//
-//    }
 public int lengthOfLongestSubString(String str) {
     int count = 0;
     String[] chars = str.split("");
