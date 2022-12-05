@@ -45,7 +45,7 @@ private Boolean checkOccurrence(String[] arr, String str){
 }
 
 private int findMaxIndex(int[] arr) {
-    int max = -1;
+    int max = arr[0];
     int maxIndex = 0;
     for (int i = 0; i < arr.length; i++) {
         if (arr[i] > max){
