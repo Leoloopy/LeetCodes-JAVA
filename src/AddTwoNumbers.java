@@ -1,61 +1,29 @@
 
 
 
-/*
+
 public class AddTwoNumbers{
     public static void main(String[] args) {
-        var list = new LinkedList();
-        list.addLast(10);
-        list.addLast(20);
-        list.addLast(30);
+        AddTwoNumbers n  = new AddTwoNumbers();
+        ListNode result = n.add(new ListNode(7), new ListNode(7));
+        System.out.println(result);
     }
-}
+    public ListNode add(ListNode l1, ListNode l2){
 
-
-
-
-class LinkedList{
-    private class Node{
-        private int value;
-        private Node next;
-
-        public Node(int value){
-            this.value = value;
+        ListNode l3 = new ListNode();
+        int carry = 0;
+        while(l1 != null || l2 != null || carry != 0){
+            if (l1 != null){
+                carry += l1.val;
+                l1 = l1.next;
+            }if (l2 != null){
+                carry += l2.val;
+                l2 = l2.next;
+            }
+            l3.next = new ListNode(carry % 10);
+            carry = carry / 10;
         }
+        return l3.next;
     }
-    //head
-    private Node first;
-    //tail
-    private Node last;
-
-
-    public void addLast(int item){
-        var node  = new Node(item);
-        if (isEmpty()){
-            first =last =node;
-        }else{
-            last.next = node;
-            last = node;
-        }
-    }
-
-    private boolean isEmpty() {
-        return first == null;
-    }
-
-    public void addFirst(int item){
-        var node  = new Node(item);
-        if (isEmpty()) {
-            first  = last = node;
-        } else  {
-            node.next = first;
-            first = node;
-        }
-
-    }
-
-
 
 }
-
- */

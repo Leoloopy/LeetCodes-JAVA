@@ -64,7 +64,8 @@ public int lengthOfLongestSubString(String str) {
                     previousSubstringLength = currentSubString.length();
                 }
                 int index = currentSubString.toString().indexOf(s.charAt(i));
-                currentSubString = new StringBuilder(currentSubString.substring(index + 1, currentSubString.length()) + s.charAt(i));
+                currentSubString = new StringBuilder(currentSubString.substring(index + 1,
+                        currentSubString.length()) + s.charAt(i));
             }
         }
         return Math.max(currentSubString.length(), previousSubstringLength);
@@ -73,9 +74,12 @@ public int lengthOfLongestSubString(String str) {
 
     public static void main(String[] args) {
         FindLongestSubstring findLongestSubstring = new FindLongestSubstring();
-        String str = "dvdf";
+        String str = "abcabcbb";
         int res = findLongestSubstring.lengthOfLongestSubstring(str);
         System.out.println(res);
+
+//        String str = "abc";
+//        System.out.println(str.indexOf("d"));
     }
 
 }
